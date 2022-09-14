@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-// const writeFileAsync = util.promisify(fs.writeFile);
+
 
 
 function promptTheUser(){
@@ -70,17 +70,25 @@ function promptTheUser(){
             name: "email",
             message: "Please enter your email: "
         }
-    ]);
-} .then (answers => {
-    const readMe = generateReadme(answers);
-    fs.writeFile('README.md', generateReadme, (error)=>
-    error ? console.log(error) : console.log('Sucessful README generated!📜'))
-})
+    ]).then (answers => {
+        const readMe = generateReadme(answers);
+        fs.writeFile('./dist/README.md', readMe, (error)=>
+        error ? console.log(error) : console.log('Sucessful README generated!📜'))
+    })
+} 
+
+function renderLicenceLink(license){
+    if(license === "Apache" ){
+        return `[Apache](http://www.apache.org/licenses/)`
+    } else if (licence === "Academic" ){
+        return `[Academic]()`
+    }
+}
 
 // generateReadme function populating the README.md
 function generateReadme(answers) {
     return `
-<h1 align="center">${answers.projectTitle} </h1>
+# ${answers.projectTitle}
   
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
 ## Description
@@ -100,6 +108,8 @@ ${answers.usage}
 ## License
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
 
+${renderLicenceLink(answers.license)}
+
 This application is covered by the ${answers.license} license. 
 ## Contributing
 ${answers.contributing}
@@ -117,5 +127,5 @@ Email me with any questions: ${answers.email}
     `;
   }
   
-const answers = promptTheUser();
-const writeFile = generateReadme(answers);
+promptTheUser();
+
