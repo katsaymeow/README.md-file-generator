@@ -1,13 +1,14 @@
+// declares inquirer and fs for promptTheUser.
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
+// promptTheUser begins the questions for the user.
 function promptTheUser(){
     return inquirer.prompt([
         {
             type: "input",
             name: "projectTitle",
-            message: "Please enter the project title?",
+            message: "Please enter the project title?: ",
         },
         {
             type: "input",
@@ -22,7 +23,7 @@ function promptTheUser(){
         {
             type: "input",
             name: "usage",
-            message: "What is the useage of this project?"
+            message: "What is the useage of this project?: "
         },
         {
             type: "list",
@@ -41,22 +42,22 @@ function promptTheUser(){
         {
             type: "input",
             name: "contributing",
-            message: "Who are the contributors of this projects?"
+            message: "Who are the contributors of this projects?: "
         },
         {
             type: "input",
             name: "tests",
-            message: "Is there a test included?"
+            message: "Is there a test included?: "
         },
         {
             type: "input",
             name: "questions",
-            message: "What do I do if I have an issue? "
+            message: "What do I do if I have an issue?: "
         },
         {
             type: "input",
             name: "sources",
-            meaasge: "Please list all your sources. When listing more than one, please include <br> between each source to allow line breaks"
+            meaasge: "Please list all your sources Include <br> between each: "
         },
         {
             type: "input",
@@ -75,6 +76,7 @@ function promptTheUser(){
     })
 } 
 
+// function to add links for each license choice. 
 function renderLicenceLink(license){
     if(license === "Apache" ){
         return `[Apache](http://www.apache.org/licenses/)`
@@ -93,7 +95,7 @@ function renderLicenceLink(license){
     }
 }
 
-// generateReadme function populating the README.md markdown
+// generateReadme function populating the README.md markdown using temporal literals.
 function generateReadme(answers) {
     return `
 # ${answers.projectTitle}
