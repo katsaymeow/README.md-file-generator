@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+// const util = require('util');
 
 
 
@@ -77,15 +77,15 @@ function promptTheUser(){
     })
 } 
 
-function renderLicenceLink(license){
-    if(license === "Apache" ){
-        return `[Apache](http://www.apache.org/licenses/)`
-    } else if (licence === "Academic" ){
-        return `[Academic]()`
-    }
-}
+// function renderLicenceLink(license){
+//     if(license === "Apache" ){
+//         return `[Apache](http://www.apache.org/licenses/)`
+//     } else if (licence === "Academic" ){
+//         return `[Academic]()`
+//     }
+// }
 
-// generateReadme function populating the README.md
+// generateReadme function populating the README.md markdown
 function generateReadme(answers) {
     return `
 # ${answers.projectTitle}
