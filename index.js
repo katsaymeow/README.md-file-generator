@@ -1,7 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const util = require('util');
-
 
 
 function promptTheUser(){
@@ -72,23 +70,35 @@ function promptTheUser(){
         }
     ]).then (answers => {
         const readMe = generateReadme(answers);
-        fs.writeFile('./dist/README.md', readMe, (error)=>
+        fs.writeFile('./README.md', readMe, (error)=>
         error ? console.log(error) : console.log('Sucessful README generated!📜'))
     })
 } 
 
-// function renderLicenceLink(license){
-//     if(license === "Apache" ){
-//         return `[Apache](http://www.apache.org/licenses/)`
-//     } else if (licence === "Academic" ){
-//         return `[Academic]()`
-//     }
-// }
+function renderLicenceLink(license){
+    if(license === "Apache" ){
+        return `[Apache](http://www.apache.org/licenses/)`
+    } else if (license === "Academic" ){
+        return `[Academic](https://opensource.org/licenses/AFL-3.0)`
+    } else if (license === "GNU" ){
+        return `[GNU](https://www.gnu.org/licenses/gpl-3.0.en.html)`
+    } else if (license === "ISC" ){
+        return`[ISC](https://opensource.org/licenses/ISC)`
+    } else if (license === "MIT"){
+        return `[MIT](https://tlo.mit.edu/learn-about-intellectual-property/software-and-open-source-licensing)`
+    } else if (license === "Mozilla"){
+        return `[Mozilla](https://www.mozilla.org/en-US/MPL/)`
+    } else (license === "Open");{
+        return `[Open](https://wiki.creativecommons.org/wiki/Open_license#:~:text=An%20open%20license%20or%20free,use%20it%20how%20you%20want%22.)`
+    }
+}
 
 // generateReadme function populating the README.md markdown
 function generateReadme(answers) {
     return `
 # ${answers.projectTitle}
+
+*****
   
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
 ## Description
@@ -101,24 +111,35 @@ ${answers.description}
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Sources](#sources)
+
+*****
+
 ## Installation
 ${answers.installation}
+*****
 ## Usage
 ${answers.usage}
+*****
 ## License
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
 
 ${renderLicenceLink(answers.license)}
 
 This application is covered by the ${answers.license} license. 
+*****
 ## Contributing
 ${answers.contributing}
+*****
 ## Tests
 ${answers.tests}
+*****
 ## Questions
 ${answers.questions}
+*****
 ## Sources
 ${answers.sources}
+*****
 
 Find me on GitHub: [${answers.username}](https://github.com/${answers.username})
 
