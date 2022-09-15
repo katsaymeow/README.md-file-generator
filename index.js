@@ -56,7 +56,7 @@ function promptTheUser(){
         {
             type: "input",
             name: "sources",
-            meaasge: "Please list all your sources"
+            meaasge: "Please list all your sources. When listing more than one, please include <br> between each source to allow line breaks"
         },
         {
             type: "input",

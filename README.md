@@ -3,9 +3,9 @@
 
 *****
   
-![badge](https://img.shields.io/badge/license-Academic-brightgreen)
+![badge](https://img.shields.io/badge/license-GNU-brightgreen)
 ## Description
- I have created a README.md generator that will produce professional README.md files that can be used as a template for efficient work flows. 
+ I have created a README.md generator that will produce professional README.md files that can be used as a template for efficient work flows.
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -17,31 +17,33 @@
 - [Sources](#sources)
 
 *****
-
+![start](./IMG/node-README.md-START.png)
 ## Installation
- Using a machine pre installed with Node, you run this program from your local machine’s terminal from the index.js file. 
+  Using a machine pre installed with Node, you run this program from your local machine’s terminal from the index.js file. 
 *****
 ## Usage
 This project is intended for developers who need quality README.md files and want a template to reduce their work flow demands. 
+![generated](./IMG/generated-readme.png)
 *****
 ## License
-![badge](https://img.shields.io/badge/license-Academic-brightgreen)
+![badge](https://img.shields.io/badge/license-GNU-brightgreen)
 
-[Academic](https://opensource.org/licenses/AFL-3.0)
+[GNU](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-This application is covered by the Academic license. 
+This application is covered by the GNU license. 
 *****
 ## Contributing
- Lindsay Allen - Developer
+Lindsay Allen - Developer
 *****
 ## Tests
-yes
+[![Test](./IMG/short-gif.mp4)](./IMG/short-gif.mp4)
+
 *****
 ## Questions
 The best way to contact me with issues about this project repository is to create a pull request to bring to my attention.
 *****
 ## Sources
-[Academic Software License](https://bastian.rieck.me/blog/posts/2020/licence/)  [ShieldsIO](https://shields.io/category/license)  [My New Favorite Markdown Cheatsheet](https://github.cadam-p/markdown-here/wiki/Markdown-Cheatsheet)
+ [Academic Software License](https://bastian.rieck.me/blog/posts/2020/licence/) <br> [ShieldsIO](https://shields.io/category/license) <br>  [My New Favorite Markdown Cheatsheet](https://github.cadam-p/markdown-here/wiki/Markdown-Cheatsheet)
 *****
 
 Find me on GitHub: [katsaymeow](https://github.com/katsaymeow)
