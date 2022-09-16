@@ -57,7 +57,7 @@ function promptTheUser(){
         {
             type: "input",
             name: "sources",
-            meaasge: "Please list all your sources Include <br> between each: "
+            meassge: "Please list all your sources Include (<br>) between each: "
         },
         {
             type: "input",
