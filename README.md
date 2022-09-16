@@ -42,6 +42,8 @@ This application is covered by the MIT license.
  Lindsay Allen - Developer
 *****
 ## Tests
+[Here is a video demostating the function of this program.](https://drive.google.com/file/d/1BfLQMcdWB1IhSSf82lZFwFYEQ5QktHi_/view)
+*****
 ![test](./IMG/test-shot-successful.png)
 *****
 ## Questions
